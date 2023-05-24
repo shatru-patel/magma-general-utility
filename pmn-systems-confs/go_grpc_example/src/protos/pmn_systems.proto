@@ -5,6 +5,7 @@ package go_package.protos;
 option go_package = "go_package/protos";
 
 import "models/access_and_mobility_subscription_data.proto";
+import "models/authentication_subscription.proto";
 
 message Void {
 
@@ -15,6 +16,8 @@ message Void {
 // --------------------------------------------------------------------------
 message PMNSubscriberData {
     AccessAndMobilitySubscriptionData amsd = 1;  
+    // auth-subs-data.json
+    AuthenticationSubscription auth_subs_data = 2;
 }
 
 service PMNSubscriberService {
